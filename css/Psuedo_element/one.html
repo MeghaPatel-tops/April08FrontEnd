@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    p:lang(fr){
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        color: blue;
+    }
+    p::selection{
+        background-color: black;
+        color: white;
+    }
+    p::first-letter{
+        color: yellow;
+    }
+    p::first-line{
+        color: red;
+    }
+    input:focus{
+        background-color: gray;
+    }
+
+    h1:first-child{
+        color: blue;
+    }
+    tr:nth-child(1){
+        background-color: rgb(177, 172, 172);
+    }
+    tr:nth-child(even){
+        background-color: aqua;
+    }
+    h1::after{
+        content: '🌲';
+    }
+    h1::before{
+        content: '🌲';
+    }
+</style>
+<body>
+    <h1>Here</h1>
+    <p lang="Fr">
+Lorem ipsum dolor sit amet 
+<br>consectetur adipisicing elit. Accusamus provident nam doloremque quam, saepe rerum eos odit velit omnis aliquid, explicabo magnam. Temporibus dolor nulla doloremque voluptatibus exercitationem suscipit expedita.
+    </p>
+    <fieldset>
+        <legend>Form</legend>
+        <label for="">Enter the value</label>
+        <input type="text" name="" id="" size="50px">
+    </fieldset>
+    
+    <h1>There</h1>
+
+    <div>
+        <h1>Inside div</h1>
+    </div>
+
+    <h1 align="center">table with cellapcing cellpadding</h1>
+    <table border="1" align="center" cellspacing="10px" cellpadding="10px">
+        <tr>
+            <th>Subject</th>
+            <th>Code</th>
+            <th>Duration</th>
+        </tr>
+        <tr>
+            <td>php</td>
+            <td>5001</td>
+            <td>6month</td>
+            
+        </tr>
+        <tr>
+            <td>php</td>
+            <td>5001</td>
+            <td>6month</td>
+            
+        </tr>
+        <tr>
+            <td>php</td>
+            <td>5001</td>
+            <td>6month</td>
+            
+        </tr>
+        <tr>
+            <td>php</td>
+            <td>5001</td>
+            <td>6month</td>
+            
+        </tr>
+        <tr>
+            <td>php</td>
+            <td>5001</td>
+            <td>6month</td>
+            
+        </tr>
+        <tr>
+            <td>php</td>
+            <td>5001</td>
+            <td>6month</td>
+            
+        </tr>
+    </table>
+</body>
+</html>
