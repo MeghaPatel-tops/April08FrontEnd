@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+        }
+        .main{
+            padding: 10px;
+            display: block;
+            /* height: 500px; */
+            width: 600px;
+            background-color: aquamarine;
+        }
+        .header{
+            /* display: block;     */
+            text-align: center;
+            background-color: rgb(54, 187, 143);
+        }
+        .center{
+            display: flex;    
+            text-align: center;
+            height: 300px;
+            gap:10px;
+            
+           
+        }
+        .aside{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-grow:1;
+            background-color: rgb(110, 199, 110);
+        }
+        .artical{
+           
+            display: flex;
+            align-items: end;
+            justify-content: center;
+            flex-grow:3;
+            background-color: rgb(232, 211, 51);
+        }
+        .product{
+            display: block;
+            justify-content: center;
+            gap:10px;
+        }
+        .innerproduct{
+            display: flex;
+            gap: 10px;
+        }
+        .atr1{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100px;
+            width: 100px;
+            background-color: rgb(214, 114, 114);
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="header">
+            <h1>Header</h1>
+        </div>
+        <div class="center">
+            <div class="aside">
+                <h1>Aside</h1>
+            </div>
+            <div class="artical">
+                
+               <div class="product">
+                <h1>Artical</h1>
+                <div class="innerproduct">
+                    <div class="atr1">art1</div>
+                    <div class="atr1">art2</div>
+                    <div class="atr1">art3</div>
+                </div>
+               </div>
+            </div>
+        </div>
+       
+        <div class="header">
+            <h1>Footer</h1>
+        </div>
+    </div>
+</body>
+</html>
