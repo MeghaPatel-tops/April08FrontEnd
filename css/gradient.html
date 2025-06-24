@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            padding: 30px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+        .main{
+            height: 200px;
+            width: 200px;
+        }
+        #box-1{
+            background-image: linear-gradient(red,green,yellow);
+        }
+         #box-2{
+            background-image: linear-gradient(to right,red,yellow);
+        }
+         #box-3{
+            
+            background-image: linear-gradient(to bottom ,red,yellow);
+        }
+        #box-4{
+            background-image: radial-gradient(circle,red,green,blue);
+        }
+        #box-5{
+            background-image: conic-gradient(red,green,blue);
+        }
+         #box-6{
+           background-image:  repeating-linear-gradient(black ,white 10%);
+        }
+          #box-7{
+           background-image:  repeating-radial-gradient(black ,white 10%);
+        }
+        #box-8{
+            background-image: linear-gradient(to right, rgba(255,0,0,0), rgba(255,0,0,1));
+        }
+    </style>
+</head>
+<body>
+    <div class="main" id="box-1"></div>
+    <div class="main" id="box-2"></div>
+    <div class="main" id="box-3"></div>
+    <div class="main" id="box-4"></div>
+    <div class="main" id="box-5"></div>
+     <div class="main" id="box-6"></div>
+    <div class="main" id="box-7"></div> 
+    <div class="main" id="box-8"></div> 
+</body>
+</html>

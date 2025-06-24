@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style> 
+    *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            display: flex;
+            justify-content: center;
+        } 
+        .main{
+            width: 80%;
+            border: 2px solid green;
+            background-color: lightgreen;
+            padding: 20px;
+            display: grid;
+            grid-template-areas: 
+            'header header header header header header '
+            'aside artical artical artical right right'
+             'aside artical artical artical right right'
+            'aside footer footer footer footer footer'
+            ;
+        }
+        .comman{
+            margin-top: 10px;
+            margin-left: 10px;
+             padding: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .header{
+           
+            grid-area: header;
+            background-color: chocolate;
+        }
+        .aside {
+            grid-area: aside;
+            background-color: aquamarine;
+        }
+        .artical{
+            height: 300px;
+            grid-area: artical;
+            background-color: aqua;
+        }
+        .right{
+            grid-area: right;
+            background-color: antiquewhite;
+
+        }
+        .footer{
+            grid-area: footer;
+            background-color: pink;
+        }
+        </style>
+</head>
+<body>
+    <div class="main">
+        <div class="comman header">
+            <h1>Header</h1>
+        </div>
+        <div class="comman aside">
+            <h1>Aside</h1>
+        </div>
+        <div class="comman artical">
+            <h1>Artical</h1>
+        </div>
+        <div class="comman right">
+             <h1>Right</h1>
+        </div>
+        <div class="comman footer">
+            <h1>Footer</h1>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .header{
+            display: flex;
+            background-color: black;
+            color: white;
+            align-items: center;
+            justify-content: flex-end;
+            
+        }
+       .first{
+         position: relative;
+       }
+        .first li{
+            border:1px solid white;
+            text-align: center;
+            width: 100px;
+            padding: 20px;
+            display: inline-block;
+        }
+        .sec li{
+            text-align: center;
+            background-color: gray;
+             width: 100px;
+            padding: 10px;
+            border-bottom: 1px solid black;
+            display: block;
+        }
+         /* .drop{
+            position: relative;
+        } */
+        .sec{
+            display: none;
+            position: absolute;
+            top:50px;
+            left: 310px;
+            z-index: 1;
+        }
+       
+        .drop:hover .sec{
+            display: block;
+        }
+
+        /* navbar */
+        .navbar{
+            position: relative;
+            top: 10px;
+            display: flex;
+            justify-content: flex-end;
+            background-color: gray;
+            gap: 20px;
+           
+        }
+        .list-tem{
+            width: 100px;
+             padding: 20px;
+            text-align: center;
+        }
+        .list-tem1{
+            width: 100px;
+            padding: 20px;
+            text-align: center;
+            background-color: rgb(130, 121, 121);
+            border-bottom: 1px solid black;
+        }
+        a{
+            color: black;
+            text-decoration: none;
+        }
+        .drop-down{
+            position: relative;
+           
+        }
+        #drop-down:hover .drop-menu{
+            display: block;
+        }
+         #drop-down:hover #drop-down a{
+            color: blue;
+        }
+        .drop-menu{ 
+             display: none;
+            position: absolute;
+            top: 50px;
+            z-index: 1;
+        }
+        .list-tem1:hover {
+            background-color: black;
+            
+        }
+         .list-tem1:hover a{
+           
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="header">
+        <ul class="first">
+            <li>Home</li>
+            <li>About</li>
+            <li>Contact</li>
+            <li class="drop">Gallary
+                 <ul class="sec">
+                    <li>Gallary 1</li>
+                    <li>Gallary 1</li>
+                    <li>Gallary 1</li>
+                </ul>
+            </li>
+            <li>Team
+               
+            </li>
+        </ul>
+    </div>
+
+    <div class="navbar">
+        <div class="list-tem"><a href="">Home</a></div>
+        <div class="list-tem"><a href="">Home</a></div>
+        <div class="list-tem" id="drop-down"><a href="">Home</a>
+            <div class="drop-menu">
+                <div class="list-tem1"><a href="">Home1</a></div>
+                <div class="list-tem1"><a href="">Home2</a></div>
+            </div>
+        </div>
+        <div class="list-tem"><a href="">Home</a></div>
+        <div class="list-tem"><a href="">Home</a></div>
+    </div>
+</body>
+</html>

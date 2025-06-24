@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       
+        .container{
+            border:1px solid wheat;
+            display: grid;
+             /* grid-template-columns:repeat(3,1fr); */
+           
+        }
+        .header{
+            background-color: purple;
+           text-align: center;
+            height: 100px;
+        }
+        .footer{
+            background-color: purple;
+           
+            height: 100px;
+        }
+        .main{
+            display: grid;
+             grid-template-columns: 1fr 2fr 1fr;
+            
+        }
+       
+        .aside{
+            /* height: 400px; */
+            background-color: aqua;
+            
+            
+        }
+        .center{
+            height: 400px;
+            text-align: left;
+             
+        }
+        .right{
+             height: 400px;
+             text-align: left;
+           
+             background-color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <div class="conatainer">
+        <div class="header">
+            jjhhj
+        </div>
+       <div class="main">
+         <div class="aside">
+            <ul>
+                <li>item-1</li>
+                <li>item-2</li>
+                <li>item-3</li>
+            </ul>
+         </div>
+         <div class="center">
+            <h1>Blog</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum libero earum architecto perferendis sed hic neque, beatae tenetur nisi porro mollitia ullam dolorum, voluptas enim et, voluptate sunt odit in.</p>
+         </div>
+         <div class="right"></div>
+       </div>
+
+    </div>
+    <div class="footer"></div>
+</body>
+</html>

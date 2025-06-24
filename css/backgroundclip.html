@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <style>
+      
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+           
+        }
+        body{
+            padding: 30px;
+        }
+        .main{
+            height: 200px;
+            padding: 30px;
+            border:10px dotted black;
+            margin-top: 30px;
+            background-color: aqua;
+        }
+        #div-1{
+            background-clip: border-box;
+        }
+         #div-2{
+            background-clip: padding-box;
+        }
+           #div-3{
+            background-clip: content-box;
+        }
+    </style>    
+</head>
+<body>
+    <div class="main" id="div-1">
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aspernatur recusandae excepturi neque cupiditate eveniet nisi, nulla vero illum, rem ea obcaecati, molestiae delectus. Nemo ad dolorem rerum dolorum nam quis!</p>
+    </div>
+    <div class="main" id="div-2">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus architecto a dolorem ullam incidunt iste soluta. Ex labore quia libero non cumque sequi aliquid temporibus, omnis consectetur doloribus, porro laborum?</p>
+    </div>
+    <div class="main" id="div-3">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam iusto aliquam sapiente inventore quos magnam tempora! Optio nihil, quasi quo voluptatum ipsa earum accusamus a velit eligendi possimus, assumenda animi.</p>
+    </div>
+</body>
+</html>

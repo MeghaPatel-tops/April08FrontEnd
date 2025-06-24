@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            height: 500px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .main{
+            height: 300px;
+            width: 300px;
+            border:5px solid black;
+        }
+        .inner{
+            height: 100px;
+            width: 100px;
+            background-color: red;
+            animation-name: demo;
+            animation-duration: 4s;
+            animation-delay: 2s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate-reverse;
+            animation-timing-function: ease-in;
+            /* animation-fill-mode: backwards; */
+
+        }
+        @keyframes demo {
+            0%,100%{
+                transform: translate(0,0);
+            }
+            25%{
+                transform: translate(200px,0);
+            }
+            50%{
+                transform: translate(200px,200px);
+            }
+            75%{
+                 transform: translate(0,200px);
+            }
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="inner"></div>
+    </div>
+</body>
+</html>

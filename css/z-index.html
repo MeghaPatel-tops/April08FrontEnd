@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .first{
+            height: 200px;
+            width: 200px;
+            position: absolute;
+            top: 100px;
+            left: 100px;
+            background-color: red;
+            z-index: 1;
+        }
+        .sec{
+            height: 200px;
+            width: 200px;
+            position: absolute;
+            top: 130px;
+            left: 130px;
+            background-color: green;
+            z-index: 0;
+        }
+        .third{
+            height: 200px;
+            width: 200px;
+            position: absolute;
+            top: 160px;
+            left: 160px;
+            background-color: blue;
+            z-index: -1;
+        }
+        .main{
+            height: 400px;
+            width: 100%;
+            border: 1px solid black;
+            position: relative;
+             top: 400px;
+        }
+        .img1{
+            height: 100%;
+            width: 100%;
+            z-index: 0;
+             position: absolute;
+        }
+        .img2{
+            position: absolute;
+            left: 370px;
+            top:150px;
+            z-index: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="first"></div>
+    <div class="sec"></div>
+    <div class="third"></div>
+    <div class="main">
+        <img src="https://images.pexels.com/photos/1563356/pexels-photo-1563356.jpeg?cs=srgb&dl=pexels-thatguycraig000-1563356.jpg&fm=jpg" alt="" class="img1">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPQNczAj_xrKRBbyfgsEuBHBLd__IUU9lkag&s" alt="" class="img2">
+    </div>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main {
+  position: relative;
+  top: 100px;
+  left: 100px;
+  height: 300px;
+  width: 300px;
+  padding: 50px;
+  border: 2px solid black;
+  perspective: 800px; /* Necessary for 3D to appear */
+}
+
+.one {
+  height: 100px;
+  width: 100px;
+  background-color: red;
+  border: 2px solid black;
+  position: absolute;
+  transform: rotateY(60deg);
+  transform-style: preserve-3d; /* Now it affects the child */
+}
+
+.child {
+  height: 50px;
+  width: 50px;
+  background: blue;
+  transform: translateZ(50px); /* Moves child in 3D space */
+}
+
+    </style>
+</head>
+<body>
+    <div class="main">
+  <div class="one">
+    <div class="child"></div>
+  </div>
+  <div class="sec"></div>
+</div>
+
+    
+</body>
+</html>

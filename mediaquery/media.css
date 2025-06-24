@@ -1,0 +1,60 @@
+@media screen  and (max-width:576px){
+     .main{
+         height: auto;
+     }
+     .main .hero-img1{
+          height: 45%;
+     }
+ .second{
+      display: block;
+      
+ }
+    .div-navbar{
+        display: block;
+        background-color: black;
+        color: white;
+         width: 100%;
+       
+       
+    }
+    .div-btn{
+        display: block;
+    }
+    .div-navbar .nav-item{
+        padding: 20px;
+        display: block;
+        text-align: left;
+        width: 100%;
+       
+    }
+  .div-navbar .nav-item button{
+            width: 90%;
+             text-align: left;
+         }
+         .hero-text{
+            height: 250px;
+         }
+    .hero-text .firsthead{
+         font-size: 5vh;
+         position: absolute;
+         top: 50px;
+    }
+    .hero-text .sechead{
+        font-size: 7vh;
+         position: absolute;
+         top: 100px;
+    }
+    .foodcatlog{
+         display: flex;
+         flex-direction: column;
+    }
+     .about-div{
+          display: flex;
+          flex-direction: column;    
+     }
+      .div-cdetails{
+          flex-direction: column;
+           align-items: center;
+      }
+
+}

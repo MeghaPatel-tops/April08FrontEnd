@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .row{
+            width: 80%;
+            border: 2px solid black;
+        }
+        .col{
+            width: 25%;
+            border:5px solid blue;
+            height: 200px;
+            float: left;
+        }
+
+        @media screen and (max-width:600px) {
+            .col{
+                width: 50%;
+            }
+        }
+        @media screen and (max-width:400px){
+            .col{
+                width: 100%;
+                float: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="row">
+        <div class="col">
+            <h1>Column-1</h1>
+        </div>
+        <div class="col">
+            <h1>Column-2</h1>
+        </div>
+        <div class="col">
+            <h1>Column-3</h1>
+        </div>
+        <div class="col">
+            <h1>Column-4</h1>
+        </div>
+    </div>
+</body>
+</html>

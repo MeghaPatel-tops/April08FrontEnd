@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url('glovely/Glovely-Regular.ttf');
+         @font-face {
+            font-family: 'Glovely-Regular';
+            src: url('glovely/Glovely-Regular.ttf');
+        }
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+           
+        }
+        body{
+            padding: 30px;
+        }
+        h1{
+            font-size: 3em;
+             font-family:'Glovely-Regular' ;
+        }
+        img{
+            height: 400px;
+            width: 100%;
+        }
+        .main{
+            mask: url("../Images/m-removebg-preview.png") no-repeat;
+        }
+    </style>
+</head>
+<body>
+    <h1>Image masking</h1>
+    <div class="main">
+        <img src="https://images.pexels.com/photos/1563356/pexels-photo-1563356.jpeg?cs=srgb&dl=pexels-thatguycraig000-1563356.jpg&fm=jpg" alt="">
+    </div>
+</body>
+</html>

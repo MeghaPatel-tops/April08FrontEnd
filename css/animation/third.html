@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            height: 500px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .main{
+            height: 300px;
+            width: 300px;
+            border:5px solid black;
+            border-radius: 50%;
+             animation-name: orbit;
+            animation-duration: 3s;
+            animation-delay: 1s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+            /* padding: 50px; */
+        }
+        .inner{
+            height: 100px;
+            width: 100px;
+            
+            border-radius: 50%;
+            /* background-image: url("../../Images/download.jpeg"); */
+            background-size: cover;
+            background-color: red;
+             animation-name: orbit;
+            animation-duration: 1s;
+            animation-delay: 1s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+           
+        }
+
+        @keyframes orbit {
+            from{
+                transform: rotate(0);
+            }
+            to{
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="inner"></div>
+    </div>
+</body>
+</html>
