@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function calc(){
+            let num1= document.getElementById("num1").value;
+            let num2= document.getElementById("num2").value;
+
+            num1 = Number(num1);
+            num2 = Number(num2);
+           
+            let str = `Addition=${num1+num2}<br>Sub=${num1-num2}<br>mul=${num1*num2}<br>div=${num1/num2}<br>rem=${num1%num2}`;
+
+            document.getElementById('result').innerHTML=str;
+            //alert(str);
+        }
+    </script>
+</head>
+<body>
+    <fieldset>
+        <legend>Simple Calc</legend>
+        <form method="post">
+            <label for="">Enter First Number</label>
+            <input type="text" name="" id="num1">
+            <br><br>
+            <label for="">Enter Second Name</label>
+            <input type="text" name="" id="num2">
+            <br><br>
+
+            <input type="button" value="Click" onclick="calc()">
+            <p id="result"></p>
+        </form>
+    </fieldset>
+</body>
+</html>
