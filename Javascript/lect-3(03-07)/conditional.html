@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function checkNumber (){
+            let num1 = document.getElementById('num1').value;
+
+            //Conditional operator
+            //(condition)?true:false;
+            (num1 > 0)?alert(`${num1} is positive`):alert(`${num1} is negative`);
+
+            //Nullish coalescing operator '??'
+            let name="dhwani";
+            alert(name ?? "Megha");
+        }
+    </script>
+</head>
+<body>
+
+        <fieldset>
+        <legend>Simple Calc</legend>
+        <form method="post">
+            <label for="">Enter Maths Number</label>
+            <input type="text" name="" id="num1">
+            <br><br>
+            
+
+            <input type="button" value="Click" onclick="checkNumber()">
+            <p id="result"></p>
+        </form>
+    </fieldset>
+    
+</body>
+</html>

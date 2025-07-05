@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img{
+            height: 200px;
+            width: 200px;
+        }
+    </style>
+    <script>
+        function imageFiletr(flag){
+            let img1 = document.getElementById('img1');
+           // alert(flag);
+            if(flag == "gray"){
+                img1.style.filter = "grayscale(100%)";
+            }
+            else if(flag=="blur"){
+               img1.style.filter = "blur(5px)";
+            }
+            else if(flag == "bright"){
+                img1.style.filter = "brightness(50%)";
+            }
+            else{
+                alert("Choose propar option");
+            }
+        }
+    </script>
+</head>
+<body>
+    <img src="https://thumbs.dreamstime.com/b/pink-flowers-float-clear-waters-hawaii-soft-white-sand-below-347952870.jpg" alt="" id="img1">
+    <br>
+    <button onclick="imageFiletr('gray')">GrayScale</button>
+    <button onclick="imageFiletr('blur')">Blur</button>
+    <button onclick="imageFiletr('bright')">Brigthness</button>
+</body>
+</html>

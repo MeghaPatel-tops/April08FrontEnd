@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            height: 100px;
+            width: 100px;
+            background-color: black;
+        }
+    </style>
+    <script>
+        function transformDiv(){
+            let task = document.getElementById('num1').value;
+            let box1= document.getElementById('box-1');
+            task = Number(task);
+            switch(task){
+                case 1:
+                    box1.style.transform="rotate(30deg)";
+                break;    
+                case 2:
+                    box1.style.transform="skew(30deg)";
+                break;
+                case 3:
+                    box1.style.transform="scale(2)";
+                break;
+                default:
+                    alert("wrong choice");
+                break;            
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="box" id="box-1"></div>
+     <fieldset>
+        <legend>Simple Calc</legend>
+        <p>
+            Pree 1 for Rotated(30deg)
+            <br>
+            press 2 for skewY(30deg)
+            <br>
+            press 3 for scale(2)
+        </p>
+        <form method="post">
+
+            <label for="">Enter First Choice</label>
+            <input type="text" name="" id="num1">
+            <br><br>
+
+            <input type="button" value="Click" onclick="transformDiv()">
+            <p id="result"></p>
+        </form>
+    </fieldset>
+</body>
+</html>
