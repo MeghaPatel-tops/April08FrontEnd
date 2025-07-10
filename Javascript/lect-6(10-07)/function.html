@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    function display(){
+        console.log("Function called");
+    }
+
+    display();
+
+    //function with parameter
+    function add(x,y){
+        console.log(`addition= ${x+y}`);
+    }
+
+    add(12,67);
+
+    //function with default value
+    function simpleIntrest(p,r,n=1){
+        let i = (p*r*n)/100;
+        console.log(`simple intrest=${i}`)
+    }
+
+    simpleIntrest(1000,2.1,2);
+    simpleIntrest(2000,3);
+
+    //function returning value
+    function square(num){
+        return num*num;
+    }
+
+    console.log(square(12));
+    let sq= square(9);
+    console.log(sq);
+
+
+    let printFunction = function (){
+        console.log("function as Expression");
+    }
+
+    printFunction();
+
+    let ArrowFunction = () =>{
+        console.log("Arrow Function called");
+        
+    }
+
+    ArrowFunction();
+
+    let multipli = () =>12*3;
+
+    console.log(multipli()
+);
+    
+let areaOfCircle = (r)=>  (3.14*r*4);
+
+console.log(areaOfCircle(2));
+
+    
+    
+    
+</script>
+</html>

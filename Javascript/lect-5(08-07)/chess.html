@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main{
+            height: 400px;
+            width: 400px;
+            border: 1px solid black;
+            
+        }
+        .black{
+            height: 50px;
+            width: 50px;
+            background-color: black;
+            display: inline-block;
+        }
+        .white{
+            
+            height: 50px;
+            width: 50px;
+            background-color:white;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <div class="main" id="main">
+
+    </div>
+</body>
+<script>
+    let i,j,m=1;
+    str="";
+    for(i=1;i<=8;i++){
+        for(j=1;j<=8;j++){
+            if((i+j)%2 == 0){
+                str+="<div class='black'></div>";
+                
+            }
+            else{
+                str+="<div class='white'></div>";
+            
+            }
+            m++;
+        }
+        str+="<br>";
+        console.log(str);
+
+    }
+    document.getElementById('main').innerHTML=str;
+</script>
+</html>
