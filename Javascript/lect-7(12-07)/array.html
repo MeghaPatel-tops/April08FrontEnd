@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    <ul id="fruitid">
+        
+    </ul>
+</body>
+<script>
+        let Fruits = ["apple","banana","kiwi"];
+        console.log(Fruits);
+
+        console.log(Fruits[2]);
+
+        //add element at end of the array
+
+        Fruits.push("mango");
+         console.log(Fruits);
+
+         //remove an element from end
+         Fruits.pop();
+         console.log(Fruits)
+
+         //add en element at starting of array
+         Fruits.unshift("Graps");
+
+          console.log(Fruits);
+
+         //remove an element at starting of array
+         Fruits.shift();
+          console.log(Fruits); 
+
+          //between any index add element
+          //splice(index,deletecount =0,"element")
+          Fruits.splice(1,0,"watermallon")
+          console.log(Fruits);
+
+          //remove element from any index
+          //splice(index,total element)
+          Fruits.splice(2,1);
+          console.log(Fruits);
+
+          //replace element of any index
+          //splice(index,pervremoveindex,"new element")
+          Fruits.splice(1,1,"cherry")
+          console.log(Fruits);
+          
+          
+          
+    //======================================
+
+    console.log("print fruits using foreach loop");
+
+    Fruits.forEach(function (index){
+         console.log(index);
+         
+    })
+    
+          str="";
+          for(let i=0;i<Fruits.length ;i++){
+
+            console.log(Fruits[i]);
+            str+=`<li>${Fruits[i]}</li>`
+          }
+          document.getElementById("fruitid").innerHTML=str;
+          
+        
+    </script>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Login Form</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+
+  <div class="container d-flex justify-content-center" >
+    <div id="loginCard" class="card position-relative shadow p-4" style="max-width: 400px; width: 100%;">
+
+
+      <h4 class="mb-4 text-center">Todo</h4>
+
+      <form>
+        <div class="mb-3">
+          <label for="email" class="form-label">Add List</label>
+          <input type="text" class="form-control" id="item" placeholder="Enter email">
+          <input type="hidden" name="" id="itemid">
+        </div>
+        
+        <button id="add" type="button" class="btn btn-primary w-100" onclick="addList()">Add</button>
+
+        <button id="up" type="button" class="btn btn-primary w-100" onclick="updateList()">Update</button>
+
+      </form>
+
+  </div>
+  </div>    
+<div class="container mt-5">
+    <h1>Todo List </h1>
+    <table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Todo</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+  <tbody id="todoid">
+    
+  </tbody>
+</table>
+<script>
+    let todoArray =["assign","project"];
+
+    function addList(){
+        let item = document.getElementById('item').value;
+        todoArray.push(item);
+        display();
+    }
+    function display(){
+        document.getElementById('up').style.display="none";
+        document.getElementById('add').style.display="block";
+        document.getElementById('item').value="";
+        let str="";
+        for(i=0;i<todoArray.length;i++){
+            str+=`<tr>
+                    <td>${i+1}</td>
+                    <td>${todoArray[i]}</td>
+                    <td><button class="btn btn-danger" onclick="delItem(${i})">DELETE</button></td>
+                    <td><button class="btn btn-success" onclick="editItem(${i})">EDIT</button></td>
+                
+                </tr>`;
+        }
+        document.getElementById('todoid').innerHTML=str;
+    }
+
+    function delItem(id){
+        todoArray.splice(id,1);
+        display();
+    }
+
+    function editItem(id){
+        document.getElementById('add').style.display="none";
+        document.getElementById('up').style.display="block";
+
+                
+        document.getElementById('item').value=todoArray[id];
+        document.getElementById('itemid').value=id;
+
+    }
+
+    function updateList(){
+        
+       let item= document.getElementById('item').value;
+      let index=  document.getElementById('itemid').value;
+      todoArray.splice(index,1,item);
+      display();
+    }
+    window.onload=display();
+</script>
+
+</div>
+
+</body>
+</html>
