@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img{
+            height: 100px;
+            width: 100px;
+        }
+    </style>
+    <script>
+        function createPara(){
+            let div1= document.getElementById('div1');
+            let p1=document.createElement('p');
+            
+            p1.textContent="Welcome To Tops tech"
+            console.log(p1);
+
+            div1.appendChild(p1);
+            
+        }
+        function genImg(){
+            let urlname = document.getElementById('imgurl').value;
+            let img1=document.createElement('img');
+            img1.setAttribute('src',urlname);
+            console.log(img1);
+            document.getElementById('imgDis').appendChild(img1)
+            
+        }
+    </script>
+</head>
+<body>
+    <button onclick="createPara()">Click</button>
+    <div id="div1">
+
+    </div>
+
+    <fieldset>
+        <input type="url" name="" id="imgurl">
+        <button onclick="genImg()">Show Image</button>
+    </fieldset>
+    <div id="imgDis"></div>
+</body>
+</html>

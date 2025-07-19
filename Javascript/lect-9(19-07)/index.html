@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            height: 100px;
+            width: 100px;
+            background-color: red;
+            margin: 10px;
+        }
+    </style>
+    <script>
+        function changeStyle(){
+            //[0].style.backgroundColor="black"
+            let className = document.getElementsByClassName("box") ;
+            console.log(className);
+            // className[0].style.backgroundColor = "blue"
+            // className[2].style.backgroundColor = "blue"
+            
+           //className.style.backgroundColor = "blue"
+            for(key of className){
+                console.log(key);
+                
+                key.style.backgroundColor="black"  
+                key.innerHTML = "<h1 style='color:white'>Hello</h1>";      
+            }
+
+            let par1= document.querySelectorAll("#para");
+            console.log(par1);
+            
+            for(key of par1){
+                key.style.color="red";
+                key.textContent="Java script"
+            }
+
+        }
+    </script>
+</head>
+<body>
+    <button onclick="changeStyle()">Click</button>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <p id="para">lorem</p>
+    <p id="para">lorem</p>
+    <p id="para">lorem</p>
+</body>
+</html>

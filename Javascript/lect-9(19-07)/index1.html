@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            padding: 100px;
+        }
+        .box{
+            height: 100px;
+            width: 100px;
+            color: blue;
+            border:1px solid red;
+        }
+        .box1{
+             height: 100px;
+            width: 100px;
+            color: blue;
+            border:1px solid red;
+            transform: rotate(45deg);
+        }
+    </style>
+    <script>
+        function rotateDiv(){
+            let div1= document.getElementById('box1');
+            div1.classList.remove('box');
+            div1.classList.add('box1');
+        }
+    </script>
+</head>
+<body>
+    <div class="box" id="box1">
+        box-1
+    </div>
+    <button onclick="rotateDiv()">Click</button>
+</body>
+</html>

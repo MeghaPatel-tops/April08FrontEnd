@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    <div id="userinfo"></div>
+    
+</body>
+<script>
+        let user ={
+            username:"Malaya",
+            email:"Malay|@gmail.com",
+            contact:"900098000"
+        }
+        let str="";
+        for(key in user){
+             str+=`
+             <h1>${key}:${user[key]}</h1>
+             `   
+        }
+        document.getElementById('userinfo').innerHTML=str;
+        
+    </script>
+</html>
