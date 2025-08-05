@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   
+    <style>
+        .box{
+            height: 100px;
+            width: 500px;
+            font-size: 3em;
+            color: white;
+            background-color: brown;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="box" id="box1"></div>
+</body>
+ <script>
+    
+        let todate = new Date();
+        let date = todate.getDate();
+        let month =todate.getMonth()+1;
+        let year = todate.getFullYear();
+        let hours = todate.getHours();
+        let mini = todate.getMinutes();
+        let sec = todate.getSeconds();
+        let cDate = `${date}-${month}-${year}  ${hours}: ${mini}: ${sec}`;
+
+       
+        document.getElementById('box1').innerHTML=cDate;
+        console.log(cDate);
+        
+        let salary = [10000,20000,30000];
+
+       let newArray= salary.map((index)=>{
+            console.log(index+(index*0.02));
+            return index+(index*0.02)
+       })
+
+       console.log(newArray);
+       
+        
+    </script>
+</html>

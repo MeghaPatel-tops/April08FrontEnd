@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        class User{
+            constructor(name,email,contact){
+                console.log("parent class construtor called");
+                
+                this.name=name;
+                this.email=email;
+                this.contact=contact;
+            }
+
+            UserData(){
+                console.log("=========parent method=========");
+                
+                console.log("username="+this.name);
+                console.log("email="+this.email);
+                console.log("contact="+this.contact);
+                
+            }
+        }
+
+        class Addtocart extends User{
+            constructor(name,email,contact,cartid,total){
+                super(name,email,contact);
+                console.log("child class construtor called");
+                
+                
+                this.cartid=cartid;
+                this.total=total
+            }
+
+            CartDisplay(){
+               console.log("=================child method===========");
+               
+                console.log("username="+this.name);
+                console.log("email="+this.email);
+                console.log("contact="+this.contact);
+                 console.log("cartid="+this.cartid);
+                  console.log("total="+this.total);
+          
+            }
+        }
+
+        let cart1= new Addtocart("megha","m@gmail.com",989899,101,1200);
+        cart1.UserData();
+        cart1.CartDisplay();
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        class Test{
+            static count=0;
+            constructor(){
+                 Test.count++;
+                 console.log("static cont called");
+            }
+            static objCount(){
+                 console.log(Test.count);     
+            }
+        }
+        let t1= new Test();
+        let t2= new Test();
+        let t3= new Test();
+        Test.objCount();
+        console.log(Test.count);
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

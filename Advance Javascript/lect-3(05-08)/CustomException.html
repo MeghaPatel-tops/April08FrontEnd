@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        class ValidatorError extends Error{
+             constructor(message){
+                super(message);
+                this.name="Invalid Input"
+             }
+        }
+
+         function checkUser(){
+            let user ={
+                name:"abc",
+                email:"abc@gmail.com"
+            };
+            try{
+                if(user.name.length<=8){
+                    throw new ValidatorError("Username should be >8 char");
+                }
+                console.log(user);
+                
+            }catch( err ){
+                if(err instanceof  ValidatorError){
+                    console.log(err.name);
+                    console.log(err.message); 
+                           
+                }
+            }
+            finally{
+                console.log("code done");
+                
+            }
+        }
+    </script>
+</head>
+<body>
+    <button onclick="checkUser()">Click</button>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        {
+            let m=10;//local scope
+        }
+
+
+
+       // console.log(m);
+
+
+        //Netsted function
+
+
+        function outerFunction(x,y){
+            function innerFunction(){
+                let m=20;
+                console.log(`x=${x} and y =${y}`); 
+            }
+           
+            
+            innerFunction();
+        }
+        
+
+        outerFunction(12,34);
+
+        function makeCounter() {
+            let count = 0;
+
+            return function() {
+                return count++;
+            };
+            }
+
+let counter = makeCounter();
+console.log(counter());
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            height: 100px;
+            width: 100px;
+            background-color: red;
+            margin-top: 100px;
+        }
+        .main{
+             height: 100px;
+            width: 500px;
+            font-size: 3em;
+            color: white;
+            background-color: brown;
+            text-align: center;
+            
+        }
+    </style>
+</head>
+<body>
+    <h1>Set Time out Example div display afetr 5 sec</h1>
+    <div id="main" class="main">
+
+    </div>
+</body>
+<script>
+    function genDiv(){
+        let div=document.createElement('div');
+        div.setAttribute('class','box');
+        document.body.appendChild(div);
+    }
+    setTimeout(genDiv,5000);
+
+    function createClock(){
+          let todate = new Date();
+        let date = todate.getDate();
+        let month =todate.getMonth()+1;
+        let year = todate.getFullYear();
+        let hours = todate.getHours();
+        let mini = todate.getMinutes();
+        let sec = todate.getSeconds();
+        let cDate = `${date}-${month}-${year}  ${hours}: ${mini}: ${sec}`;
+
+       
+        document.getElementById('main').innerHTML=cDate;
+    }
+    setInterval(createClock,1000);
+</script>
+</html>

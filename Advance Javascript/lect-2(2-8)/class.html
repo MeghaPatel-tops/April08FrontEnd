@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        class User{
+            constructor(name,email,contact){
+                this.name=name;
+                this.email=email;
+                this.contact=contact;
+            }
+
+            UserData(){
+                console.log("username="+this.name);
+                console.log("email="+this.email);
+                console.log("contact="+this.contact);
+                
+            }
+        }
+
+        let user1 = new User("Tisha","t@gmail.com",98878787);
+        user1.UserData();
+
+        let user2 = new User("krishna","k@gmail.com",67676766);
+        user2.UserData();
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

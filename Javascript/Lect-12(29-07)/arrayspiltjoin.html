@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="checkbox" name="hb[]" id="hb[]" value="music">Music
+    <input type="checkbox" name="hb[]" id="hb[]" value="sports">Sports
+    <input type="checkbox" name="hb[]" id="hb[]" value="Drwaing">Drawing
+    <input type="button" value="Submit" onclick="getHobby()">
+</body>
+<script>
+    function getHobby(){
+        let hobby= document.querySelectorAll('input[type="checkbox"]:checked');
+        console.log(hobby);
+        
+         const selectedValues = Array.from(hobby).map(checkbox => checkbox.value);
+
+        console.log(selectedValues);
+        let hobbystr = selectedValues.join("-");
+        console.log(hobbystr);
+
+        console.log(hobbystr.split("-"));     
+        
+    }
+</script>
+</html>

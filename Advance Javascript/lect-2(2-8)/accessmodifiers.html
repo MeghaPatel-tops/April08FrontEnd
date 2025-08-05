@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        class User{
+            #privateMethod(){
+                console.log("private method:");
+            }
+             publicMethod(){
+                this.#privateMethod();
+                console.log("public method:");
+                
+            }
+        }
+
+        let u1 = new User();
+        u1.publicMethod();
+       // u1.privateMethod();//Error
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

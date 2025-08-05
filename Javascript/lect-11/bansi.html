@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slider</title>
+
+    <style>
+    header {
+        padding: 40px;
+        background-color: aquamarine;
+        margin-bottom: 10px;
+    }
+
+    .hero {
+        width: 100%;
+        overflow: hidden;
+        position: relative;
+    }
+
+    .slider {
+        display: flex;
+        width: 100%; 
+        transition: transform 0.5s ease-in-out;
+    }
+
+    .image {
+        width: 100%;
+        flex: 0 0 100%;
+        height: 500px;
+    }
+
+    .image img {
+        width: 100%;
+        height: 100%;
+        /* object-fit: cover; */
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: rgba(0, 0, 0, 0.5);
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      cursor: pointer;
+      z-index: 10;
+      font-size: 18px;
+    }
+
+    .prev {
+      left: 10px;
+    }
+
+    .next {
+      right: 10px;
+    }
+
+    .btn:hover {
+      background-color: rgba(0, 0, 0, 0.7);
+    }
+</style>
+</head>
+<body>
+    <header>
+
+    </header>
+    <main>
+        <section class="hero">
+            <div class="slider">
+                <button class="btn prev" id="prev" onclick="moveLeft()">&#10094;</button>
+                <button class="btn next" id="next" onclick="moveRidght()">&#10095;</button>
+                <div class="image">
+                    <img src="https://wallpaperheart.com/wp-content/uploads/2018/04/wallpaper.wiki-Cool-nature-backgrounds-hd-resolution-nature-background-image-hd.jpg" alt="slider1">
+                </div>
+                <div class="image">
+                    <img src="https://www.pixelstalk.net/wp-content/uploads/2016/07/3840x2160-Images-Free-Download.jpg" alt="slider2">
+                </div>
+                <div class="image">
+                    <img src="https://cdn.pixabay.com/photo/2016/05/05/02/37/sunset-1373171__480.jpg" alt="slider3">
+                </div>
+                <div class="image">
+                    <img src="https://images.rawpixel.com/image_800/cHJpdmF0ZS9zdGF0aWMvaW1hZ2VzL3dlYnNpdGUvMjAyMi0wNS9wZDM2LTEtZ3NmY18yMDE3MTIwOF9hcmNoaXZlX2UwMDE2NTEtam9iNTgyLTJfMS5qcGc.jpg" alt="slider4">
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+    <script>
+        let Current=0;
+        let slider = document.querySelectorAll('.image');
+        console.log(slider);
+            function moveRidght(){    
+                Current++;
+                 if(Current>0){
+                    slider[Current-1].style.display = "none";
+                 }
+                 
+                slider[Current].style.display = "block";
+                 
+                  console.log(Current);
+                  displayControl();
+                
+            }
+            function moveLeft(){
+                
+               console.log("moveleft"+Current); 
+                let slider = document.querySelectorAll('.image');
+                console.log(slider);
+                slider[Current].style.display = "none";
+                slider[Current-1].style.display = "block";
+                 Current--;
+                  console.log(Current);
+                  displayControl();
+              
+            }
+          function displayControl(){
+            
+            if(Current >=3){
+               
+                    
+                        document.getElementById("next").style.display="none";
+            }
+            else{
+                 document.getElementById("next").style.display="block";
+            }
+            if(Current<=0){
+                    console.log("in bound");
+                    
+                    document.getElementById("prev").style.display="none";
+            }
+            else{
+                document.getElementById("prev").style.display="block";
+            }    
+          }
+          displayControl();
+    </script>
+</html>

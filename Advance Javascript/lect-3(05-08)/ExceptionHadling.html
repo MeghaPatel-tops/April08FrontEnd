@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+       try {
+            console.log(m);
+        } catch (error) {
+            console.log(error.message)
+        }
+    
+        console.log("hello");
+        
+        function checkUser(){
+            let user ={
+                name:"abcjjhjhjhkjhkjh",
+                email:"abc@gmail.com"
+            };
+            try{
+                if(user.name.length<=8){
+                    throw new SyntaxError("Username should be >8 char");
+                }
+                console.log(user);
+                
+            }catch( err ){
+                if(err instanceof  SyntaxError){
+                    console.log(err.message);        
+                }
+            }
+            finally{
+                console.log("code done");
+                
+            }
+        }
+
+       
+         window.onerror = function(message, url, line, col, error) {
+            alert(`${message}\n At ${line}:${col} of ${url}`);
+         };
+          printData();
+        
+    </script>
+</head>
+<body>
+    <button onclick="checkUser()">Click</button>
+</body>
+</html>

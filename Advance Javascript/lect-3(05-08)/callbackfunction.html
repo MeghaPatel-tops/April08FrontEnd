@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let user={};
+            function addUser(){
+                createUser(()=>{
+                    printInvoice(user)
+                });
+                
+            }
+            function createUser(callback){
+                console.log("createuser");
+                
+                let uname = document.getElementById('uname').value;
+                let email=document.getElementById('email').value;
+                user.uname=uname;
+                user.email=email;
+                if(user){
+                    callback(user);
+                }
+            }
+            function printInvoice(user){
+                console.log("print invoice")
+                let str= `  <table border="1">
+            <tr>
+                <th>Username:</th>
+                <td>${user.uname}</td>
+           
+                <th>Email:</th>
+                <td>${user.email}</td>
+            </tr>
+        </table>`;
+        document.getElementById('incvoice').innerHTML=str;
+        }
+    </script>
+</head>
+<body>
+    <fieldset>
+        <legend>User Info</legend>
+        <label for="">Username:</label>
+        <input type="text" name="" id="uname">
+        <br><br>
+        <label for="">Email:</label>
+        <input type="email" name="" id="email">
+        <input type="button" value="Add" onclick="addUser()">
+    </fieldset>
+    <div id="incvoice">
+      
+    </div>
+</body>
+</html>

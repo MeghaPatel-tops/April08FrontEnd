@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    let bulkData = new Map();
+    bulkData.set("date","29-7-2025")
+    bulkData.set(101,"product-laptop");
+    bulkData.set(true,"isadmin");
+
+    for(let[k,v] of bulkData){
+        console.log(`key=${k}   value=${v}`);
+        
+    }
+    console.log(bulkData.size);
+    
+    console.log(bulkData);
+    console.log(bulkData.get("date"));
+    bulkData.delete(true);
+    console.log(bulkData);
+
+    bulkData.clear();
+     console.log(bulkData);
+
+
+     let subject=["php","java","DA","DDS"];
+
+     let subjectSet=new Set(subject);
+
+    
+
+     console.log(subjectSet);
+     
+    
+    
+</script>
+</html>
