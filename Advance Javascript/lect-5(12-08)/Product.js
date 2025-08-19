@@ -7,9 +7,9 @@
             <img src="${index.image}" class="card-img-top" alt="..." style="height:200px">
             <div class="card-body">
                 <h5 class="card-title">${index.title}</h5>
-                <p class="card-text">${index.description}</p>
+               
                 <p>${index.price}</p>
-                <a href="#" class="btn btn-primary">Add to Cart</a>
+                <button  class="btn btn-primary" onclick="addtocart(${index.id})">Add to Cart</button>
              </div>
         </div></div>`;
          
@@ -20,7 +20,7 @@
             },1000)
             
         }
-
+    
      export   async function getProduct(){
             try {
                 let response = await fetch('https://fakestoreapi.com/products');

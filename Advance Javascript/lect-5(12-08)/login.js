@@ -16,6 +16,33 @@ async function registration(){
 
 }
 
+   async function addtocart(productInfo){
+    let userName = prompt("Enter tour UserId");
+    let username=localStorage.getItem('userName');
+    let token = localStorage.getItem('userToken');
+    
+        if(username==userName && token){
+
+            let res = await fetch("https://fakestoreapi.com/products/"+productInfo);
+            product= await res.json();
+            console.log(product);
+            //Add Firsttime
+            let cartDataUser = localStorage.getItem('cartdata');
+            let cartObj = JSON.parse(cartDataUser);
+
+             let cartData = {
+              "username":username,
+              "pid":productInfo,
+              "qty":1,
+             
+              "productInfo":product
+          }
+           localStorage.setItem('cartdata',JSON.stringify(cartData));
+           alert("product added successfully");
+        }
+         
+    }
+
 async function login(){
      let username = document.getElementById('username').value;
     let pwd = document.getElementById('pwd').value;

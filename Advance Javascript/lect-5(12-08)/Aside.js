@@ -13,6 +13,10 @@ function Aside(){
     str+=`</ul>`;
     if(userName && userName!= ""){
       str+=` <ul class="nav navbar-nav navbar-right">
+      <li class='mb-0 me-5'>
+        <a href ="cart.html">Cart</a>
+      </li>
+          <li>
       <li class='mb-0'>Welcome:${userName}</li>
           <li>
           <button type="button" class="btn btn-primary" onclick="logout()" >
