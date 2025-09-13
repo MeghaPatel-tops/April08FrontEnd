@@ -16,7 +16,8 @@ function App() {
   return (
     <>
       <h1>My first app</h1>
-      <Calc />
+       <Aside  />
+      {/* <Calc /> */}
       {/* <Dashbord userRole={"guest"} />
       <Home  isLogging={false} isloading={true} /> */}
       {/* 
