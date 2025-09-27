@@ -9,6 +9,8 @@ import Prodcut from './components/Prodcut'
 import Userprofile from './components/Userprofile'
 import { ThemeContext } from './components/TheamContext'
 import Counter from './components/Counter'
+import Ecom from './components/Ecom'
+import ProdData from './components/ProdData'
 
 
 
@@ -18,10 +20,11 @@ function App() {
 
   return (
     <>
-      <ThemeContext value={"dark"} >
+      {/* <ThemeContext value={"dark"} >
       <Userprofile user={{uid:101,name:"Krishna",email:"k2gmail.com",conatct:90009999}}/>
     </ThemeContext>
-    <Counter />
+    <Counter /> */}
+    <ProdData />
     </>
   )
 }
