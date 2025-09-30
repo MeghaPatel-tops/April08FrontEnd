@@ -1,23 +1,24 @@
-import { useState } from 'react'
+import { useContext, useState } from 'react'
 
 import './App.css'
+import GrandPa from './assets/Components/GrandPa'
+import { themeContext } from './assets/Components/themeContext'
+import Counterapp from './assets/Components/Counterapp'
 
 function App() {
+  const {theme,setTheme} = useContext(themeContext);
   const [count, setCount] = useState(0)
 
   return (
     <>
-    <div class="p-6 max-w-sm mx-auto bg-white rounded-xl shadow-lg flex items-center gap-x-4">
-  <div class="shrink-0">
-       <h1 class="text-3xl font-bold underline">
-    Hello world!
-  </h1>
-  </div>
-  <div>
-    <div class="text-xl font-medium text-black">ChitChat</div>
-    <p class="text-slate-500">You have a new message!</p>
-  </div>
-</div>
+      <div style={{
+        backgroundColor: theme ==="light" ? 'white':'black',
+        color:theme =="light"? 'black':'white'
+      }}>
+        <h1>App HEading</h1>
+         <GrandPa />
+         <Counterapp />
+      </div>
      
     </>
   )
